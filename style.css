@@ -59,7 +59,6 @@ body {
     background-color: #a50606;
     cursor: not-allowed;
 }
-
 .prize-ladder {
     position: fixed;
     right: 20px;
@@ -70,6 +69,28 @@ body {
     border-radius: 5px;
 }
 
+@media screen and (max-width: 768px) {
+    .game-container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .prize-ladder {
+        position: static;
+        transform: none;
+        margin: 20px auto;
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .options-container {
+        grid-template-columns: 1fr;
+    }
+
+    .lifelines {
+        flex-wrap: wrap;
+    }
+}
 .prize-level {
     padding: 5px 10px;
 }
