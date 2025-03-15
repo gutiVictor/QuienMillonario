@@ -2,7 +2,7 @@ import questions from './questions.js';
 
 let currentQuestion = 0;
 let currentPrize = 0;
-const prizes = [5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110 , 120];
+const prizes = [5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110];
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
