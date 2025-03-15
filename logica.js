@@ -1,7 +1,7 @@
 const questions = [
     {
-        question: "¿En qué año Cristóbal Colón llegó a América?",
-        options: ["1492", "1489", "1495", "1500"],
+        question: "¿que el es malo para la historia?",
+        options: ["moya", "machicao", "lirido", "CArver"],
         correct: 0
     },
     {
@@ -65,9 +65,18 @@ let currentQuestion = 0;
 let currentPrize = 0;
 const prizes = [500, 1000, 2000, 4000, 8000, 16000, 32000, 64000, 125000, 250000, 500000, 1000000];
 
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
 function startGame() {
     currentQuestion = 0;
     currentPrize = 0;
+    shuffleArray(questions);
     updatePrizeLadder();
     showQuestion();
 }
