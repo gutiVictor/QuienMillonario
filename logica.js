@@ -1,69 +1,8 @@
-const questions = [
-    {
-        question: "¿que el es malo para la historia?",
-        options: ["moya", "machicao", "lirido", "CArver"],
-        correct: 0
-    },
-    {
-        question: "¿Quién fue el primer emperador romano?",
-        options: ["Julio César", "Augusto", "Nerón", "Calígula"],
-        correct: 1
-    },
-    {
-        question: "¿En qué año comenzó la Primera Guerra Mundial?",
-        options: ["1913", "1914", "1915", "1916"],
-        correct: 1
-    },
-    {
-        question: "¿Cuál fue la capital del Imperio Azteca?",
-        options: ["Tenochtitlán", "Cusco", "Machu Picchu", "Chichén Itzá"],
-        correct: 0
-    },
-    {
-        question: "¿En qué año cayó el Muro de Berlín?",
-        options: ["1987", "1988", "1989", "1990"],
-        correct: 2
-    },
-    {
-        question: "¿Quién fue el primer presidente de México?",
-        options: ["Benito Juárez", "Guadalupe Victoria", "Miguel Hidalgo", "Porfirio Díaz"],
-        correct: 1
-    },
-    {
-        question: "¿En qué año terminó la Segunda Guerra Mundial?",
-        options: ["1944", "1945", "1946", "1947"],
-        correct: 1
-    },
-    {
-        question: "¿Cuál fue la primera civilización de la historia?",
-        options: ["Egipcia", "Sumeria", "China", "India"],
-        correct: 1
-    },
-    {
-        question: "¿Quién pintó la Mona Lisa?",
-        options: ["Miguel Ángel", "Leonardo da Vinci", "Rafael", "Botticelli"],
-        correct: 1
-    },
-    {
-        question: "¿En qué año se descubrió América?",
-        options: ["1490", "1491", "1492", "1493"],
-        correct: 2
-    },
-    {
-        question: "¿Cuál fue la primera dinastía china?",
-        options: ["Xia", "Shang", "Zhou", "Qin"],
-        correct: 0
-    },
-    {
-        question: "¿En qué año se independizó México de España?",
-        options: ["1810", "1821", "1824", "1836"],
-        correct: 1
-    }
-];
+import questions from './questions.js';
 
 let currentQuestion = 0;
 let currentPrize = 0;
-const prizes = [500, 1000, 2000, 4000, 8000, 16000, 32000, 64000, 125000, 250000, 500000, 1000000];
+const prizes = [5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110 , 120];
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -73,7 +12,7 @@ function shuffleArray(array) {
     return array;
 }
 
-function startGame() {
+export function startGame() {
     currentQuestion = 0;
     currentPrize = 0;
     shuffleArray(questions);
@@ -98,8 +37,8 @@ function showQuestion() {
 }
 
 // Add these lines at the top of your file, after the questions array
-const correctSound = new Audio('correct.mp3');
-const wrongSound = new Audio('pierde.mp3');
+const correctSound = new Audio('sounds/correct.mp3');
+const wrongSound = new Audio('sounds/pierde.mp3');
 
 function checkAnswer(selectedIndex) {
     const questionData = questions[currentQuestion];
@@ -132,7 +71,7 @@ function updatePrizeLadder() {
     });
 }
 
-function useFiftyFifty() {
+export function useFiftyFifty() {
     const lifeline = document.getElementById('fifty-fifty');
     if (lifeline.classList.contains('used')) return;
     
@@ -150,7 +89,7 @@ function useFiftyFifty() {
     lifeline.classList.add('used');
 }
 
-function usePhoneFriend() {
+export function usePhoneFriend() {
     const lifeline = document.getElementById('phone-friend');
     if (lifeline.classList.contains('used')) return;
     
@@ -159,7 +98,7 @@ function usePhoneFriend() {
     lifeline.classList.add('used');
 }
 
-function useAudience() {
+export function useAudience() {
     const lifeline = document.getElementById('audience');
     if (lifeline.classList.contains('used')) return;
     
