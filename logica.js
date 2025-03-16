@@ -1,4 +1,4 @@
-import questions from './questions.js';
+import { questions } from './questions.js';
 
 let currentQuestion = 0;
 let currentPrize = 0;
@@ -45,13 +45,22 @@ function checkAnswer(selectedIndex) {
     if (selectedIndex === questionData.correct) {
         correctSound.play();  // Play correct sound
         currentPrize = prizes[currentQuestion];
-        currentQuestion++;
         
-        if (currentQuestion >= questions.length) {
-            alert(`¡Felicidades! Has ganado $${currentPrize}`);
+        if (currentQuestion >= questions.length - 1) {
+            alert(`¡Felicidades! Has ganado el juego! Premio final: $${currentPrize}`);
+            // Reset lifelines before starting new game
+            document.querySelectorAll('.lifeline').forEach(lifeline => {
+                lifeline.classList.remove('used');
+                lifeline.style.display = 'block';
+            });
+            // Add a slight delay before restarting
+            setTimeout(() => {
+                startGame();
+            }, 1500);
             return;
         }
         
+        currentQuestion++;
         updatePrizeLadder();
         showQuestion();
     } else {
