@@ -3,6 +3,7 @@ import { questions } from './questions.js';
 let currentQuestion = 0;
 let currentPrize = 0;
 const prizes = [5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110];
+const totalQuestions = 12; // Número total de preguntas
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -36,37 +37,32 @@ function showQuestion() {
     });
 }
 
-// Add these lines at the top of your file, after the questions array
 const correctSound = new Audio('sounds/correct.mp3');
 const wrongSound = new Audio('sounds/pierde.mp3');
 
 function checkAnswer(selectedIndex) {
     const questionData = questions[currentQuestion];
     if (selectedIndex === questionData.correct) {
-        correctSound.play();  // Play correct sound
+        correctSound.play();
         currentPrize = prizes[currentQuestion];
-        
-        if (currentQuestion >= questions.length - 1) {
-            alert(`¡Felicidades! Has ganado el juego! Premio final: $${currentPrize}`);
-            // Reset lifelines before starting new game
-            document.querySelectorAll('.lifeline').forEach(lifeline => {
-                lifeline.classList.remove('used');
-                lifeline.style.display = 'block';
-            });
-            // Add a slight delay before restarting
-            setTimeout(() => {
-                startGame();
-            }, 1500);
-            return;
-        }
-        
         currentQuestion++;
+
+        // Verifica si ha respondido las 12 preguntas correctamente
+        if (currentQuestion === totalQuestions) {
+            setTimeout(() => {
+                alert(`¡Felicidades! Has ganado el juego!  Eres Un Gran Alumno  dedicado . Premio final: $${currentPrize}`);
+            }, 500);
+            return; // No sigue mostrando más preguntas
+        }
+
         updatePrizeLadder();
         showQuestion();
     } else {
-        wrongSound.play();  // Play wrong sound
-        alert(`Juego terminado. Te llevas $${currentPrize}`);
-        startGame();
+        wrongSound.play();
+        setTimeout(() => {
+            alert(`Juego terminado. Te llevas $${currentPrize}`);
+            startGame();
+        }, 500);
     }
 }
 
