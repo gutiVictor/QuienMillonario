@@ -1,34 +1,34 @@
 export const questions = [
   {
     question:
-      "En Doctrina y Convenios 28, ¿qué se enseña sobre la revelacion en la Iglesia?",
+      "En Doctrina y Convenios 28, ¿qué se enseña sobre la revelación en la Iglesia?",
     options: [
-      "(A) Solo el profeta puede recibir revelaciones para la Iglesia",
-      "(B) Todos los miembros pueden recibir revelaciones personales",
-      "(C) Los líderes locales tienen la misma autoridad que el profeta",
+      "(A) Solo el profeta puede recibir revelaciónes para la Iglesia",
+      "(B) Todos los miembros pueden recibir revelaciónes personales",
+      "(C) Los líderes locales tienen la mismas llaves que el profeta",
       "(D) La autoridad se basa en la sabiduría humana",
     ],
     correct: 0,
   },
   {
     question:
-      "Según Doctrina y Convenios 1-30 al 33, ¿qué caracteriza la palabra de Dios?",
+      "Según Doctrina y Convenios 1:31, ¿qué piensa el Señor sobre el pecado?",
     options: [
-      "(A) Es un don temporal que cambia con el tiempo",
-      "(B) Es eterna y se cumple sin fallar",
-      "(C) Depende de la interpretación humana",
-      "(D) Es un concepto filosófico sin autoridad divina",
+      "(A) El Señor no puede ver el pecado debido a su misericordia",
+      "(B) El Señor ignora el pecado si hay arrepentimiento",
+      "(C) El Señor no tolera el pecado en el más minimo grado",
+      "(D) El Señor no puede perdnar el pecado  ",
     ],
-    correct: 1,
+    correct: 2,
   },
   {
     question:
       "En Doctrina y Convenios 4, ¿qué cualidades son necesarias para servir en la obra misional?",
     options: [
-      "(A) Conocimiento científico y habilidades técnicas",
-      "(B) Riqueza, fama y poder",
+      "(A) Conocer sobre las escrituras",
+      "(B) Ser humildes y pacificos",
       "(C) Fe, esperanza, caridad y amor",
-      "(D) Experiencia en liderazgo empresarial",
+      "(D) Tener un corazon quebrando",
     ],
     correct: 2,
   },
@@ -47,8 +47,8 @@ export const questions = [
     question:
       "En Doctrina y Convenios 6:36, ¿qué invitacion nos hace el Salvador?",
     options: [
-      "(A) Obedecer los mandaminetos del Señor",
-      "(B) Hcaer lo corrceto en la Iglesia",
+      "(A) Obedecer los mandamientos del Señor",
+      "(B) Hacer lo correcto en la Iglesia",
       "(C) Mirar hacia Él en todo pensamiento",
       "(D) Amarlo a Él  y al prójimo",
     ],
@@ -57,10 +57,10 @@ export const questions = [
   {
     question: "Según Doctrina y Convenios 8 , ¿cómo se recibe la revelación?",
     options: [
-      "(A) Mediante el estudio , fe y esperanza",
+      "(A) Mediante el estudio,la fe y la esperanza",
       "(B) Mediante el poder del Espíritu Santo",
       "(C) Mediante sueños y visiones como Josue",
-      "(D) Mediante la lógica y el razonamiento",
+      "(D) Mediante la oracion y la meditación",
     ],
     correct: 1,
   },
@@ -71,7 +71,7 @@ export const questions = [
       "(A) Incita a la iniquidad contra lo bueno",
       "(B) Engañar a los líderes de la Iglesia",
       "(C) Crear divisiones entre los miembros",
-      "(D)  Robar y alterar las escrituras",
+      "(D) Robar y alterar las escrituras",
     ],
     correct: 0,
   },
@@ -92,7 +92,7 @@ export const questions = [
     options: [
       "(A) Muchas bendiciones",
       "(B) Salud en el ombligo",
-      "(C) Levantarce en la primera resurrección",
+      "(C) Levantarse en la primera resurrección",
       "(D) Salvacion sempiterna ",
     ],
     correct: 3,
@@ -101,7 +101,7 @@ export const questions = [
     question:
       "Según Doctrina y Convenios 17, ¿qué se les prometió a los Tres Testigos del Libro de Mormón?",
     options: [
-      "(A) Recibir revelacion para la Iglesia",
+      "(A) Recibir revelación para la Iglesia",
       "(B) Ser escribientes del libro de Mormón",
       "(C) Poder traducir el libro de Mormón",
       "(D) Ver las planchas de oro ",
@@ -114,7 +114,7 @@ export const questions = [
     options: [
       "(A) Que todas las almas son iguales",
       "(B) Que son de gran valor para Dios ",
-      "(C) Que solo algunas almas se salvaran",
+      "(C) Que solo algunas almas se salvarán",
       "(D) Que el valor de las almas depende de sus obras",
     ],
     correct: 1,
@@ -134,9 +134,9 @@ export const questions = [
     question:
       "En Doctrina y Convenios 23, ¿qué consejo da el Señor a los líderes de la Iglesia?",
     options: [
-      "(A) Buscar revelacion para la Iglesia",
+      "(A) Buscar revelación para la Iglesia",
       "(B) Ayudar a los miembros necesitados",
-      "(C) Exortar y fortalecer a la Iglesia ",
+      "(C) Exhortar y fortalecer a la Iglesia ",
       "(D) Interpretar el libro de Mormón",
     ],
     correct: 2,
@@ -168,7 +168,7 @@ export const questions = [
     options: [
       "(A) Predicar el evangelio a los Lamanitas",
       "(B) Bautizar a los Lamanitas",
-      "(C) Recibir revelacion paera predicar el evangelio",
+      "(C) Recibir revelación paera predicar el evangelio",
       "(D) Orar y Ayunar por los Lamanitas",
     ],
     correct: 0,
@@ -241,12 +241,12 @@ export const questions = [
   },
   {
     question:
-      "Según Doctrina y Convenios 21:4–8, ¿qué promesa recibe la iglesia si sigue las palabras del profeta?",
+      "Según Doctrina y Convenios 21:4–8, ¿qué se nos promete si siguimos las palabras del profeta?",
     options: [
-      "(A) Las puertas del infierno no prevalecerán contra ellos",
-      "(B) Recibirán la bendiciones prometidas",
-      "(C) Serán exaltados en el postrer día",
-      "(D) Serán llamados hijos del convenio",
+      "(A) Las puertas del infierno no prevalecerán contra nosotros",
+      "(B) Recibiremos las bendiciones prometidas",
+      "(C) Seremos exaltados en el postrer día",
+      "(D) Seremosllamados hijos del convenio",
     ],
     correct: 0,
   },
